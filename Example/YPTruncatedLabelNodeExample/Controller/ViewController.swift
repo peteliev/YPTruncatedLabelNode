@@ -12,20 +12,20 @@ import YPTruncatedLabelNode
 
 final public class ViewController: NSViewController {
 
+    // MARK: - Outlets
     @IBOutlet private weak var skView: SKView!
     
     private lazy var labelNode: YPTruncatedLabelNode = {
-        let text = """
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            """
+        let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         
-        let labelNode = YPTruncatedLabelNode(text: text)
+        let labelNode = YPTruncatedLabelNode()
+        labelNode.originalText = text
         labelNode.fontColor = .black
         labelNode.fontSize = 30
         return labelNode
     }()
     
+    // MARK: - NSViewController
     override public func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,17 +36,29 @@ final public class ViewController: NSViewController {
             scene.scaleMode = .aspectFill
             scene.backgroundColor = .white
             
-            // Present the scene
+            // present the scene
             view.presentScene(scene)
             
-            // Setup label node
+            // setup label node
             scene.addChild(labelNode)
             labelNode.position = NSPoint(x: size.width / 2, y: size.height / 2)
+            
+            // update label node
+            updateLabelNode()
         }
     }
     
     public override func viewDidLayout() {
         super.viewDidLayout()
-        // todo
+        updateLabelNode()
+    }
+}
+
+// MARK: - Private Methods
+private extension ViewController {
+    
+    func updateLabelNode() {
+        labelNode.maxWidth = view.frame.width
+        labelNode.boundText()
     }
 }
