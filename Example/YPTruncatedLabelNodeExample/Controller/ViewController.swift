@@ -19,9 +19,11 @@ final public class ViewController: NSViewController {
         let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         
         let labelNode = YPTruncatedLabelNode()
+        labelNode.truncationMode = .middle
         labelNode.originalText = text
         labelNode.fontColor = .black
         labelNode.fontSize = 30
+        
         return labelNode
     }()
     
@@ -42,9 +44,6 @@ final public class ViewController: NSViewController {
             // setup label node
             scene.addChild(labelNode)
             labelNode.position = NSPoint(x: size.width / 2, y: size.height / 2)
-            
-            // update label node
-            updateLabelNode()
         }
     }
     

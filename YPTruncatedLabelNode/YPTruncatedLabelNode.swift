@@ -31,6 +31,7 @@ final public class YPTruncatedLabelNode: SKLabelNode {
         didSet { text = originalText }
     }
     
+    public var truncationMode: TruncationMode = .tail
     public var maxWidth: CGFloat = 0
     
     // MARK: - Public Methods
@@ -54,12 +55,38 @@ private extension YPTruncatedLabelNode {
         if textWidth < maxWidth {
             return text
         } else {
-            let boundedString = text
-                .replacingOccurrences(of: Configuration.truncationPattern, with: "")
+            let truncatedString = buildTruncatedString(from: text, with: truncationMode)
+            return buildBoundedString(for: truncatedString, with: font, maxWidth: maxWidth)
+        }
+    }
+    
+    func buildTruncatedString(from text: String, with truncationMode: TruncationMode) -> String {
+        switch truncationMode {
+        case .head:
+            let truncation = Configuration.truncationPattern
+            let str = text
+                .replacingOccurrences(of: truncation, with: "")
+                .dropFirst()
+            return truncation.appending(str)
+        case .tail:
+            let truncation = Configuration.truncationPattern
+            return text
+                .replacingOccurrences(of: truncation, with: "")
                 .dropLast()
-                .appending(Configuration.truncationPattern)
+                .appending(truncation)
+        case .middle:
+            let truncation = Configuration.truncationPattern
+            let untruncatedText = text.replacingOccurrences(of: truncation, with: "")
             
-            return buildBoundedString(for: boundedString, with: font, maxWidth: maxWidth)
+            let halfCount = untruncatedText.count / 2
+            let isEvenCount = untruncatedText.count % 2 == 1
+            let offset = isEvenCount ? 1 : 0
+            
+            let firstHalf = untruncatedText.prefix(halfCount + offset)
+            let secondHalf = untruncatedText.suffix(halfCount)
+            let firstHalfWithoutLast = firstHalf.dropLast()
+            
+            return firstHalfWithoutLast + truncation + secondHalf
         }
     }
 }
