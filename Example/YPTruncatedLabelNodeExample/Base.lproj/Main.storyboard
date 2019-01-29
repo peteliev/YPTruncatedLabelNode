@@ -705,12 +705,25 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="YPTruncatedLabelNodeExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl" customClass="SKView">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Bqc-cn-hbf" customClass="SKView">
+                                <rect key="frame" x="-600" y="-200" width="2000" height="1000"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2000" id="HDu-Fq-DZU"/>
+                                    <constraint firstAttribute="height" constant="1000" id="Wim-jb-5oU"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Bqc-cn-hbf" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="HCi-51-uE0"/>
+                            <constraint firstItem="Bqc-cn-hbf" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="xWH-Xo-AJ5"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="skView" destination="m2S-Jp-Qdl" id="qux-te-cT3"/>
+                        <outlet property="skView" destination="Bqc-cn-hbf" id="Fdi-sf-vNV"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

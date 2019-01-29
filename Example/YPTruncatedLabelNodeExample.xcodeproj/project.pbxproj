@@ -12,6 +12,8 @@
 		6F86835C21FFD5D80045BC18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86835B21FFD5D80045BC18 /* ViewController.swift */; };
 		6F86835E21FFD5D80045BC18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F86835D21FFD5D80045BC18 /* Assets.xcassets */; };
 		6F86836121FFD5D80045BC18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F86835F21FFD5D80045BC18 /* Main.storyboard */; };
+		6F86837621FFE27D0045BC18 /* YPTruncatedLabelNode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F86837221FFD7AD0045BC18 /* YPTruncatedLabelNode.framework */; };
+		6F86837721FFE27D0045BC18 /* YPTruncatedLabelNode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F86837221FFD7AD0045BC18 /* YPTruncatedLabelNode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +24,28 @@
 			remoteGlobalIDString = 6F36B27521FFD443009021A0;
 			remoteInfo = YPTruncatedLabelNode;
 		};
+		6F86837821FFE27D0045BC18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F86836D21FFD7AC0045BC18 /* YPTruncatedLabelNode.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F36B27421FFD443009021A0;
+			remoteInfo = YPTruncatedLabelNode;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6F86837A21FFE27D0045BC18 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6F86837721FFE27D0045BC18 /* YPTruncatedLabelNode.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6F86835021FFD5D80045BC18 /* YPTruncatedLabelNodeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YPTruncatedLabelNodeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F86837621FFE27D0045BC18 /* YPTruncatedLabelNode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,10 +142,12 @@
 				6F86834C21FFD5D80045BC18 /* Sources */,
 				6F86834D21FFD5D80045BC18 /* Frameworks */,
 				6F86834E21FFD5D80045BC18 /* Resources */,
+				6F86837A21FFE27D0045BC18 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6F86837921FFE27D0045BC18 /* PBXTargetDependency */,
 			);
 			name = YPTruncatedLabelNodeExample;
 			productName = YPTruncatedLabelNodeExample;
@@ -206,6 +232,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F86837921FFE27D0045BC18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YPTruncatedLabelNode;
+			targetProxy = 6F86837821FFE27D0045BC18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6F86835F21FFD5D80045BC18 /* Main.storyboard */ = {
@@ -337,6 +371,7 @@
 		6F86836721FFD5D80045BC18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -357,6 +392,7 @@
 		6F86836821FFD5D80045BC18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;

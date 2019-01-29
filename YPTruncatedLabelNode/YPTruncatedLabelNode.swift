@@ -10,4 +10,6 @@ import SpriteKit
 
 final public class YPTruncatedLabelNode: SKLabelNode {
     
+    
+    
 }
