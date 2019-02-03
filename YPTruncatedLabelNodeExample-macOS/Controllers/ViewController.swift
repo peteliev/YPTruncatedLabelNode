@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  YPTruncatedLabelNodeExample
+//  YPTruncatedLabelNodeExample-macOS
 //
-//  Created by Zhenya Peteliev on 1/29/19.
+//  Created by Zhenya Peteliev on 2/3/19.
 //  Copyright © 2019 Zhenya Peteliev. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import SpriteKit
 import YPTruncatedLabelNode
 
 final public class ViewController: NSViewController {
-
+    
     // MARK: - Outlets
     @IBOutlet private weak var skView: SKView!
     
@@ -30,7 +30,7 @@ final public class ViewController: NSViewController {
     // MARK: - NSViewController
     override public func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let view = self.skView {
             let size = view.frame.size
             let scene = SKScene(size: size)
