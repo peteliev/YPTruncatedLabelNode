@@ -8,6 +8,14 @@
 
 import SpriteKit
 
+#if os(iOS)
+    import UIKit
+    public typealias Font = UIFont
+#else
+    import AppKit
+    public typealias Font = NSFont
+#endif
+
 public enum TruncationMode {
     case head // Truncate at head of line: "...wxyz"
     case tail // Truncate at tail of line: "abcd..."
@@ -29,9 +37,9 @@ final public class YPTruncatedLabelNode: SKLabelNode {
     public var maxWidth: CGFloat = 0
     
     // MARK: - Private Properties
-    private var font: NSFont? {
+    private var font: Font? {
         guard let fontName = fontName else { return nil }
-        return NSFont(name: fontName, size: fontSize)
+        return Font(name: fontName, size: fontSize)
     }
     
     // MARK: - Public Methods
@@ -44,12 +52,12 @@ final public class YPTruncatedLabelNode: SKLabelNode {
 // MARK: - Private Methods
 private extension YPTruncatedLabelNode {
     
-    func width(for text: String, with font: NSFont) -> CGFloat {
+    func width(for text: String, with font: Font) -> CGFloat {
         let size = text.size(withAttributes: [.font: font])
         return size.width
     }
     
-    func buildBoundedString(for text: String, with font: NSFont, maxWidth: CGFloat) -> String {
+    func buildBoundedString(for text: String, with font: Font, maxWidth: CGFloat) -> String {
         let textWidth = width(for: text, with: font)
         
         if textWidth < maxWidth {

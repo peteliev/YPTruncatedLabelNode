@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F36B27421FFD443009021A0"
-               BuildableName = "YPTruncatedLabelNode.framework"
-               BlueprintName = "YPTruncatedLabelNode-macOS"
+               BlueprintIdentifier = "6F8D20DE22078A7D00A2C772"
+               BuildableName = "YPTruncatedLabelNode_iOS.framework"
+               BlueprintName = "YPTruncatedLabelNode-iOS"
                ReferencedContainer = "container:YPTruncatedLabelNode.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F36B27421FFD443009021A0"
-            BuildableName = "YPTruncatedLabelNode.framework"
-            BlueprintName = "YPTruncatedLabelNode-macOS"
+            BlueprintIdentifier = "6F8D20DE22078A7D00A2C772"
+            BuildableName = "YPTruncatedLabelNode_iOS.framework"
+            BlueprintName = "YPTruncatedLabelNode-iOS"
             ReferencedContainer = "container:YPTruncatedLabelNode.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F36B27421FFD443009021A0"
-            BuildableName = "YPTruncatedLabelNode.framework"
-            BlueprintName = "YPTruncatedLabelNode-macOS"
+            BlueprintIdentifier = "6F8D20DE22078A7D00A2C772"
+            BuildableName = "YPTruncatedLabelNode_iOS.framework"
+            BlueprintName = "YPTruncatedLabelNode-iOS"
             ReferencedContainer = "container:YPTruncatedLabelNode.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
