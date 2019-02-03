@@ -19,7 +19,7 @@ final public class ViewController: NSViewController {
         let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         
         let labelNode = YPTruncatedLabelNode()
-        labelNode.truncationMode = .middle
+        labelNode.truncationMode = .tail
         labelNode.originalText = text
         labelNode.fontColor = .black
         labelNode.fontSize = 30

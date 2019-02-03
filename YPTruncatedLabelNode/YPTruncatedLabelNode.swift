@@ -20,12 +20,6 @@ final public class YPTruncatedLabelNode: SKLabelNode {
         static let truncationPattern = "..."
     }
     
-    // MARK: - Private Properties
-    private var font: NSFont? {
-        guard let fontName = fontName else { return nil }
-        return NSFont(name: fontName, size: fontSize)
-    }
-    
     // MARK: - Public Properties
     public var originalText: String? = nil {
         didSet { text = originalText }
@@ -33,6 +27,12 @@ final public class YPTruncatedLabelNode: SKLabelNode {
     
     public var truncationMode: TruncationMode = .tail
     public var maxWidth: CGFloat = 0
+    
+    // MARK: - Private Properties
+    private var font: NSFont? {
+        guard let fontName = fontName else { return nil }
+        return NSFont(name: fontName, size: fontSize)
+    }
     
     // MARK: - Public Methods
     public func boundText() {
@@ -61,21 +61,20 @@ private extension YPTruncatedLabelNode {
     }
     
     func buildTruncatedString(from text: String, with truncationMode: TruncationMode) -> String {
+        let truncation = Configuration.truncationPattern
+        
         switch truncationMode {
         case .head:
-            let truncation = Configuration.truncationPattern
-            let str = text
+            let truncatedText = text
                 .replacingOccurrences(of: truncation, with: "")
                 .dropFirst()
-            return truncation.appending(str)
+            return truncation.appending(truncatedText)
         case .tail:
-            let truncation = Configuration.truncationPattern
             return text
                 .replacingOccurrences(of: truncation, with: "")
                 .dropLast()
                 .appending(truncation)
         case .middle:
-            let truncation = Configuration.truncationPattern
             let untruncatedText = text.replacingOccurrences(of: truncation, with: "")
             
             let halfCount = untruncatedText.count / 2
