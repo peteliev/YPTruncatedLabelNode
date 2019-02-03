@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F8D20DE22078A7D00A2C772"
-               BuildableName = "YPTruncatedLabelNode.framework"
-               BlueprintName = "YPTruncatedLabelNode-iOS"
+               BlueprintIdentifier = "6F8D20EB2207906C00A2C772"
+               BuildableName = "YPTruncatedLabelNodeExample-iOS.app"
+               BlueprintName = "YPTruncatedLabelNodeExample-iOS"
                ReferencedContainer = "container:YPTruncatedLabelNode.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6F8D20EB2207906C00A2C772"
+            BuildableName = "YPTruncatedLabelNodeExample-iOS.app"
+            BlueprintName = "YPTruncatedLabelNodeExample-iOS"
+            ReferencedContainer = "container:YPTruncatedLabelNode.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F8D20DE22078A7D00A2C772"
-            BuildableName = "YPTruncatedLabelNode.framework"
-            BlueprintName = "YPTruncatedLabelNode-iOS"
+            BlueprintIdentifier = "6F8D20EB2207906C00A2C772"
+            BuildableName = "YPTruncatedLabelNodeExample-iOS.app"
+            BlueprintName = "YPTruncatedLabelNodeExample-iOS"
             ReferencedContainer = "container:YPTruncatedLabelNode.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,15 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F8D20DE22078A7D00A2C772"
-            BuildableName = "YPTruncatedLabelNode.framework"
-            BlueprintName = "YPTruncatedLabelNode-iOS"
+            BlueprintIdentifier = "6F8D20EB2207906C00A2C772"
+            BuildableName = "YPTruncatedLabelNodeExample-iOS.app"
+            BlueprintName = "YPTruncatedLabelNodeExample-iOS"
             ReferencedContainer = "container:YPTruncatedLabelNode.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  YPTruncatedLabelNodeExample-macOS
+//  YPTruncatedLabelNodeExample-iOS
 //
 //  Created by Zhenya Peteliev on 2/3/19.
 //  Copyright © 2019 Zhenya Peteliev. All rights reserved.
@@ -9,7 +9,7 @@
 import SpriteKit
 import YPTruncatedLabelNode
 
-final public class ViewController: NSViewController {
+final public class ViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet private weak var skView: SKView!
@@ -40,11 +40,11 @@ final public class ViewController: NSViewController {
         
         // setup label node
         scene.addChild(labelNode)
-        labelNode.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        labelNode.position = CGPoint(x: size.width / 2, y: size.height / 2)        
     }
     
-    public override func viewDidLayout() {
-        super.viewDidLayout()
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         updateLabelNode()
     }
 }
@@ -53,7 +53,9 @@ final public class ViewController: NSViewController {
 private extension ViewController {
     
     func updateLabelNode() {
-        labelNode.maxWidth = view.frame.width
+        labelNode.maxWidth = skView.frame.width
         labelNode.boundText()
     }
 }
+
+

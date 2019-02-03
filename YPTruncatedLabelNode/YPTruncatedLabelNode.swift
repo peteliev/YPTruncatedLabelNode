@@ -45,7 +45,7 @@ final public class YPTruncatedLabelNode: SKLabelNode {
     // MARK: - Public Methods
     public func boundText() {
         guard let originalText = originalText, let font = font, maxWidth > 0.0 else { return }
-        text = buildBoundedString(for: originalText, with: font, maxWidth: maxWidth)
+        text = buildBoundedString(for: originalText, with: font, maxWidth: maxWidth)        
     }
 }
 
