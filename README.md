@@ -1,6 +1,6 @@
 # YPTruncatedLabelNode
 
-![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS-orange.svg)
+![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS-lightgrey.svg)
 [![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![License](https://img.shields.io/cocoapods/l/Compass.svg?style=flat)](http://cocoadocs.org/docsets/Compass)
 
